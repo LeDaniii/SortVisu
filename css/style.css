@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header {
+  background-color: #241ea3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  height: 10vh;
+}
+
+.logo {
+  font-size: 2.5rem;
+  margin-left: 2rem;
+  color: #f08a4f;
+  width: 10%;
+}
+
+.slideContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  width: 40%;
+}
+
+.slideContainer p {
+  font-size: 2rem;
+  color: #f08a4f;
+}
+
+.slider {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 50%;
+  height: 2rem;
+  background: -webkit-gradient(linear, left top, right top, from(#04ff2e), color-stop(#f1f506), to(red));
+  background: linear-gradient(90deg, #04ff2e, #f1f506, red);
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 1px 10px 1px black;
+          box-shadow: 0px 1px 10px 1px black;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 3rem;
+  height: 3rem;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 3rem;
+  height: 3rem;
+  background: black;
+  border-radius: 3rem;
+  cursor: pointer;
+  box-shadow: 0px 1px 10px 1px black;
+}
+
+.sortBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  width: 40%;
+}
+
+.sortBtn button {
+  padding: 1rem;
+  border-radius: 1rem;
+  border: none;
+  background: #f08a4f;
+  color: #241ea3;
+  font-size: 2rem;
+  -webkit-box-shadow: 0px 1px 10px 1px black;
+          box-shadow: 0px 1px 10px 1px black;
+  cursor: pointer;
+}
+
+.sortBtn button:active {
+  -webkit-box-shadow: black inset 2px 2px 10px 2px;
+          box-shadow: black inset 2px 2px 10px 2px;
+}
+
+.value {
+  width: 15%;
+}
+/*# sourceMappingURL=style.css.map */

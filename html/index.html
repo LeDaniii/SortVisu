@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ----- Font Awesome ----- -->
+    <script
+      src="https://kit.fontawesome.com/1dd2006b34.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- ----- CSS ----- -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- ----- JQuery ----- -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <title>Sorting Visulizer</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>DevDaniii</h1>
+      </div>
+      <div class="slideContainer">
+        <input
+          type="range"
+          min="1"
+          max="500"
+          value="300"
+          id="myRange"
+          class="slider"
+        />
+        <div class="value">
+          <p>Value: <span id="value"></span></p>
+        </div>
+      </div>
+      <div class="sortBtn">
+        <button>Merge Sort</button>
+        <button>Quick Sort</button>
+        <button>Heap Sort</button>
+        <button>Bubble Sort</button>
+      </div>
+    </header>
+    <script src="../JS/script.js"></script>
+  </body>
+</html>

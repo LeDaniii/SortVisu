@@ -1,0 +1,30 @@
+// ------ FlexBox for faster writing -----
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+// ----- Button Layout -----
+@mixin Btn {
+}
+
+// ----- Font-Sizes -----
+$header1: 4rem;
+$header2: 3rem;
+$header3: 2.5rem;
+$header4: 2rem;
+$text: 2rem;
+
+// ----- color scheme -----
+$primary-color: #241ea3;
+$second-color: #f08a4f;
+$third-color: #4037f0;
+$fourth-color: #42f01f;
+$fifth-color: #34a31d;
+
+// ----- import Scss -----
+@import "./global";
+@import "./navbar";
+@import "./header";
