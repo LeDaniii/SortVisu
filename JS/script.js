@@ -1,6 +1,7 @@
-// ----- Slider -----
+// ----- Get Elements -----
 let slider = document.getElementById("myRange");
 let output = document.getElementById("value");
+let bubbleStart = document.getElementById("bubbleSort");
 
 // ----- slider live output -----
 output.innerHTML = slider.value;
@@ -10,7 +11,6 @@ slider.oninput = function () {
 };
 
 // ----- Generate Column ------
-
 let section = document.getElementById("main");
 
 // ----- Random Number -----
@@ -18,7 +18,7 @@ function randomInt() {
   return Math.floor(Math.random() * 780 + 20);
 }
 
-// ------ Generate New Array
+// ------ Generate New Array ------
 const columnArray = [];
 function newArray() {
   for (let i = 0; i < slider.value; i++) {
@@ -27,6 +27,7 @@ function newArray() {
   return columnArray;
 }
 
+// ----- Bubble Sort ------
 function bubbleSort() {
   let length = columnArray.length;
   for (let i = 0; i < length; i++) {
@@ -42,6 +43,8 @@ function bubbleSort() {
   }
   return columnArray;
 }
+
+// ------ Generate Collumns ------
 function generateColumn() {
   for (let i = 0; i < columnArray.length; i++) {
     let column = document.createElement("div");
@@ -51,10 +54,22 @@ function generateColumn() {
     section.appendChild(column);
   }
 }
+
+// test
 console.log(columnArray);
 newArray();
-bubbleSort();
 generateColumn();
+
+// ----- start bubble sort -----
+bubbleStart.addEventListener("click", bubbleSort, false);
+bubbleStart.addEventListener(
+  "click",
+  function () {
+    console.log(columnArray);
+  },
+  false
+);
+
 // generateColumn();
 // for (let i = 0; i < newArray().length; i++) {
 //   console.log(newArray[i]);
