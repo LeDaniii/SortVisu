@@ -1,0 +1,12 @@
+.main {
+  @include flex(center, flex-start, row);
+  flex-flow: wrap;
+  height: 100vh;
+}
+
+#column {
+  background: linear-gradient($primary-color, grey);
+  height: 800px;
+  width: 2px;
+  margin: 2px;
+}

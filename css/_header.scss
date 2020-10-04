@@ -1,6 +1,6 @@
 header {
   background-color: $primary-color;
-  @include flex(space-between, center, row);
+  @include flex(space-around, center, row);
   flex-flow: wrap;
   height: 10vh;
 }
@@ -80,5 +80,5 @@ header {
 }
 
 .value {
-  width: 15%;
+  width: 20%;
 }
