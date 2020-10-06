@@ -10,21 +10,45 @@ slider.oninput = function () {
   output.innerHTML = this.value;
 };
 
-// ----- Generate Column ------
+// ----- Get Section where the columns are generated ------
 let section = document.getElementById("main");
 
 // ----- Random Number -----
 function randomInt() {
   return Math.floor(Math.random() * 780 + 20);
 }
+//
+//
+//
+//
+//
+//
+slider.addEventListener("input", updateArray);
+let arrayValue = slider.value;
 
-// ------ Generate New Array ------
-const columnArray = [];
+// ----- Update Array Size ------
+function updateArray() {
+  arrayValue = slider.value;
+  newArray();
+  console.log(arrayValue);
+}
+window.onload = updateArray();
+
+// ------ Generate New Array + columns ------
+
 function newArray() {
-  for (let i = 0; i < slider.value; i++) {
+  section.innerHTML = "";
+  let columnArray = new Array();
+  for (let i = 0; i < arrayValue; i++) {
     columnArray.push(randomInt());
   }
-  return columnArray;
+  for (let i = 0; i < columnArray.length; i++) {
+    let column = document.createElement("div");
+    column.setAttribute("id", "column");
+    column.setAttribute("class", "column");
+    column.style.height = `${columnArray[i]}px`;
+    section.appendChild(column);
+  }
 }
 
 // ----- Bubble Sort ------
@@ -45,30 +69,35 @@ function bubbleSort() {
 }
 
 // ------ Generate Collumns ------
-function generateColumn() {
-  for (let i = 0; i < columnArray.length; i++) {
-    let column = document.createElement("div");
-    column.setAttribute("id", "column");
-    column.setAttribute("class", "column");
-    column.style.height = `${columnArray[i]}px`;
-    section.appendChild(column);
-  }
-}
+// function generateColumn() {
+//   for (let i = 0; i < columnArray.length; i++) {
+//     let column = document.createElement("div");
+//     column.setAttribute("id", "column");
+//     column.setAttribute("class", "column");
+//     column.style.height = `${columnArray[i]}px`;
+//     section.appendChild(column);
+//   }
+
+// function quickSort() {
+//   if (columnArray.length == 1) {
+//     return columnArray;
+//   }
+// }
 
 // test
-console.log(columnArray);
-newArray();
-generateColumn();
+// console.log(columnArray);
+// newArray();
+// generateColumn();
 
 // ----- start bubble sort -----
-bubbleStart.addEventListener("click", bubbleSort, false);
-bubbleStart.addEventListener(
-  "click",
-  function () {
-    console.log(columnArray);
-  },
-  false
-);
+// bubbleStart.addEventListener("click", bubbleSort, false);
+// bubbleStart.addEventListener(
+//   "click",
+//   function () {
+//     console.log(columnArray);
+//   },
+//   false
+// );
 
 // generateColumn();
 // for (let i = 0; i < newArray().length; i++) {
